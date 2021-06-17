@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<title>Στέφανος Τσιτσιπάς - By Μαρία Σαντά</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Arial','Brush Script MT', cursive}
+body, html {
+  height: 300%;
+  color: #777;
+  line-height: 2;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: centre;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('https://greekcitytimes.com/wp-content/uploads/2020/10/Screen-Shot-2020-10-29-at-8.12.58-am-1170x600.png');
+  min-height: 30%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+           onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">ΚΕΝΤΡΙΚΗ ΣΕΛΙΔΑ</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ΒΙΟΓΡΑΦΙΚΟ</a>
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ΒΙΝΤΕΟ ΚΑΙ ΦΩΤΟΓΡΑΦΙΚΟ
+          ΥΛΙΚΟ</a>
+        <a href="#tableStatics" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Πίνακας Στατιστικών</a>
+
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+            <i class="fa fa-search"></i>
+        </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">Ένας Έλληνας που ξεχωρίζει</a>
+        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-left" style="black-space:nowrap;">
+        <span class="w3-center w3-black w3-large w3-wide w3-animate-opacity">ΣΤΕΦΑΝΟΣ <span class="w3-hide-small">ΤΣΙΤΣΙΠΑΣ</span> </span>
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+
+
+</h3>
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i> Στέφανος Τσιτσιπάς :: Βιογραφικό </b></p>
+        <p>
+            <audio controls>
+
+                <source src="https://mp3soundstream.com/wp-content/uploads/2020/09/Flute-Of-Joy-60.mp3"
+                        type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </p>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tsitsipas_WM17_%2816%29_%2835379193973%29.jpg/800px-Tsitsipas_WM17_%2816%29_%2835379193973%29.jpg"
+             class="w3-round w3-image w3-opacity w3-hover-opacity-off">
+    </div>
+
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>Ο Τσιτσιπάς γεννήθηκε στις 12 Αυγούστου 1998, γιος του Αποστόλη Τσιτσιπά και της Τζούλιας Αποστόλη (το γένος
+            Σαλνίκοβα) στην Καρδίτσα. Ο πατέρας του είναι Έλληνας και η μητέρα του Ρωσίδα. Οι γονείς του είναι
+            επαγγελματίες τενίστες, ενώ η μητέρα του ήταν νούμερο 1 στην κατηγορία νέων, ήταν εντός των κορυφαίων 200
+            παγκοσμίως και εκπροσώπησε την Σοβιετική Ένωση στο Φεντ Καπ.Δεν προχώρησε στην καριέρα της γιατί υπήρχαν
+            περιορισμοί στην ελευθερία μετακίνησης εκείνη την εποχή. Ο πατέρας του εργάζονταν ως δάσκαλος της
+            αντισφαίρισης στο ξενοδοχείο Αστήρ Παλάς στη Βουλιαγμένη όταν γεννήθηκε. Αρχικά γνωρίστηκαν σε τουρνουά της
+            Παγκόσμιας Ομοσπονδίας Τένις στην Αθήνα όπου η μητέρα του ήταν παίκτρια και ο πατέρας του ήταν διαιτητής. Ο
+            Στέφανος έχει τρία αδέλφια, τον Πέτρο, τον Παύλο και την Ελισάβετ, όλοι τους παίκτες του τένις.</p>
+        <p>Οι γονείς του έχουν μεγάλη ιστορία στο τένις. Οι γονείς του Τσιτσιπά θυμούνται ότι ο γιος τους άρχιζε να
+            παίζει σε πολύ μικρή ηλικία. Ο Στέφανος δήλωσε: "Θυμάμαι ότι ήμουν τριών χρονών και χτύπαγα μπάλες με τον
+            πατέρα μου στο κενό ανάμεσα στα μαθήματα. Θυμάμαι να βλέπω αγώνες στην τηλεόραση, όταν ήμουν μωρό. Δεν μπορώ
+            να σας πω ποιος έπαιζε αλλά θυμάμαι ότι το παρακολουθούσα." Συμμετείχε και σε άλλες αθλητικές
+            δραστηριότητες, όπως κολύμβηση και ποδόσφαιρο(η μεγάλη αγάπη του μετά το τέννις, πρότυπο του ο Ροναλντίνιο).
+            Ο πατέρας του είπε ότι ο Στέφανος αποφάσισε ο ίδιος να γίνει τενίστας, ανακαλώντας τα λόγια του γιου του
+            όταν "τον ξύπνησε στα μέσα της νύχτας" μετά από ένα τουρνουά στη Γαλλία στην ηλικία των 9 ετών, λέγοντας του
+            "Πατέρα, έχω να σου πω κάτι. Θέλω να γίνω τενίστας, μου αρέσει ο ανταγωνισμός, μου αρέσει η πρόκληση."</p>
+        <p>Ο Τσιτσιπάς άρχισε να παρακολουθεί μαθήματα στο Σύλλογο Τέννις της Γλυφάδας στην Αττική όταν ήταν έξι ετών,
+            και από τότε έχει συνεχίσει εδώ και καιρό να προπονείται εκεί.Ο κύριος προπονητής ήταν ο πατέρας του, ο
+            οποίος σπούδασε προπόνηση τένις στο Πανεπιστήμιο Αθηνών για να βοηθήσει τα παιδιά του. Το 2015, ο
+            Τσιτσιπάς άρχισε να προπονείται στην ακαδημία Πάτρικ Μουράτογλου, χωρίζοντας τον χρόνο του ανάμεσα στη
+            Γαλλία και την Ελλάδα εκείνη τη περίοδο. Το κόστος των ταξιδιών ήταν πολύ μεγάλο, δεν υπήρχε στήριξη
+            από την ομοσπονδία αντισφαίρισης ή άλλο φορέα. Η αδερφή της μητέρας του τον στήριζε οικονομικά και γι αυτό
+            δηλώνει ευγνώμων. </p>
+        <p>Στις 16 Νοεμβρίου του 2019 κέρδισε με 2-0 σετ τον Ρότζερ Φέντερερ (6-3, 6-4) και προκρίθηκε στον μεγάλο
+            τελικό των ATP Finals, που διεξήχθησαν στο Λονδίνο. Στον τελικό την επομένη (17 Νοεμβρίου) κέρδισε τον
+            Ντόμινικ Τιμ. </p>
+    </div>
+</div>
+<p class="w3-large w3-center w3-padding-16">Δεξιότητες: </p>
+<p class="w3-wide"><i class="fa fa-shield"></i>Ευκαμψία</p>
+<div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+</div>
+<p class="w3-wide"><i class="fa fa-shield"></i>Ταχύτητα / ευελιξία ποδιών</p>
+<div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+</div>
+<p class="w3-wide"><i class="fa fa-shield"></i>Αντοχή</p>
+<div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+</div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">Φωτογραφίες </h3>
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-in-action-in-his-mens-semi-final-match-picture-id1124604410?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-celebrates-victory-in-his-mens-singles-picture-id1302614691?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-celebrates-victory-after-his-semifinal-picture-id1188025707?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-celebrates-after-winning-a-point-during-picture-id1278264699?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-poses-with-the-trophy-after-his-singles-picture-id1188267382?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-celebrates-with-the-trophy-after-his-picture-id1188271044?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-celebrates-winning-a-point-in-his-third-picture-id1084330558?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://media.gettyimages.com/photos/stefanos-tsitsipas-of-greece-celebrates-in-his-singles-match-against-picture-id1187443155?s=2048x2048"
+                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        </div>
+    </div>
+</div>
+
+
+<!-- Container (Video Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">Αγώνες</h3>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m4">
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jmUiPiyuPvw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="w3-col m4">
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/9joIjBV6Hy0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="w3-col m4">
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/8QTRWeVoGW0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="w3-col m4">
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/PBcpJjZL-Tk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="w3-col m4">
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/RiozxIkNqSg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="w3-col m4">
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/36j9_V7VxR8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Container (Table Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">Σύντομες πληροφορίες</h3>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m4">
+            <table style="width:23em">
+                <tbody>
+
+                <tr>
+                    <th scope="row">Χώρα&nbsp;(sports)</th>
+                    <td><span class="flagicon"><img alt=""
+                                                    src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/23px-Flag_of_Greece.svg.png"
+                                                    decoding="async" class="thumbborder"
+                                                    srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/35px-Flag_of_Greece.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/45px-Flag_of_Greece.svg.png 2x"
+                                                    data-file-width="600" data-file-height="400"
+                                                    width="23" height="15">&nbsp;Ελλάδα</span>
+                </tr>
+                <tr>
+                    <th scope="row">Τόπος κατοικίας</th>
+                    <td class="infobox-data label">Μόντε Κάρλο, Μονακό</td>
+                </tr>
+                <tr>
+                    <th scope="row">Γεννημένος</th>
+                    <td>12 Αυγούστου 1998 (22 ετών)
+                        Αθηνα, Ελλάδα
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Υψος</th>
+                    <td>1.93&nbsp;m (6&nbsp;ft 4&nbsp;in)<sup id="cite_ref-atp-profile_1-1"
+                                                              class="reference"><a
+                            href="#cite_note-atp-profile-1">[1]</a></sup></td>
+                </tr>
+                <tr>
+                    <th scope="row">Έγινε επαγγελματίας
+                    </th>
+                    <td>2016</td>
+                </tr>
+                <tr>
+                    <th scope="row">Τύπος παιχνιδιού</th>
+                    <td>Δεξιόχειρο (ένα χέρι backhand)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Προπονητης</th>
+                    <td>Απόστολος Τσιτσιτάς<br>Patrick
+                        Mouratoglou</a> (2018–)
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Χρηματικό έπαθλο</th>
+                    <td>13,476,892 €</td>
+                </tr>
+                <tr>
+                    <th scope="row">Official website</th>
+                    <td><a rel="nofollow" class="external text" href="https://www.stsitsipas.com/">stsitsipas.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="background-color:lavender;">Singles</th>
+                </tr>
+                <tr>
+                    <th scope="row">Ρεκόρ καριέρας</th>
+                    <td>151–81</td>
+                </tr>
+                <tr>
+                    <th scope="row">Τίτλοι καριέρας</th>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th scope="row">Υψηλότερη κατάταξη</th>
+                    <td>Νο. 5 (5 Αυγούστου 2019)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Τρέχουσα κατάταξη</th>
+                    <td>Νο. 5 (8 Μαρτίου 2021)</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="background-color:lavender;">Αποτελέσματα Grand Slam Singles
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">Australian&nbsp;Open
+                    </th>
+                    <td>SF (2019, 2021)
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">French&nbsp;Open</a>
+                    </th>
+                    <td>SF (2020)
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Wimbledon</th>
+                    <td>4R (2018)
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">US Open</th>
+                    <td>3R (2020)</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="background-color:lavender;">Άλλα τουρνουά</th>
+                </tr>
+                <tr>
+                    <th scope="row">Tour Finals</th>
+                    <td>W (2019)</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="background-color:lavender;">Doubles</th>
+                </tr>
+                <tr>
+                    <th scope="row">Ρεκόρ καριέρας</th>
+                    <td>12–32</td>
+                </tr>
+                <tr>
+                    <th scope="row">Τίτλοι καριέρας</th>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Υψηλότερη κατάταξη</th>
+                    <td>Νο. 68 (19 Αυγούστου 2019)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Τρέχουσα κατάταξη</th>
+                    <td>Αρ. 99 (8 Μαρτίου 2021)</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="background-color:lavender;">Αποτελέσματα Grand Slam Doubles
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">Australian Open</th>
+                    <td>1R (2021)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Wimbledon</th>
+                    <td>1R (2018)</td>
+                </tr>
+                <tr>
+                    <th scope="row">US Open</th>
+                    <td> 2R (2018)</td>
+                </tr>
+                <th colspan="2" style="background-color:lavender;">Ομαδικοί διαγωνισμοί
+                </th>
+                </tr>
+                <tr>
+                    <th scope="row">Davis Cup</th>
+                    <td>WGII (2020)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Hopman Cup</th>
+                    <td>RR (2019)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+<!-- Container (Table JS Section) -->
+<div class="w3-content w3-container w3-padding-64" id="tableStatics">
+    <h3 class="w3-center">Πίνακας Στατιστικών</h3>
+<div id="grid" style="width: 100%; height: 400px;"></div>
+
+<script type="text/javascript">
+$(function () {
+    $('#grid').w2grid({
+        name: 'grid',
+        show: {
+          toolbar: true,
+            footer: true
+        },
+        multiSearch: true,
+        searches: [
+            { field: 'recid', caption: 'ID ', type: 'int' },
+            { field: 'MatchRecord', caption: ' Match Record ', type: 'text' },
+            { field: 'YTDwl', caption: ' YTD W/L ', type: 'text' },
+            { field: 'CAREERwl', caption: '  CAREER W/L  ', type: 'text' },
+            { field: 'YTDFEDEXIndex', caption: '  CAREER W/L  ', type: 'text' },
+            { field: 'CareerFedexIndex', caption: '  Career Fedex Index  ', type: 'text' },
+            { field: 'Titles', caption: '  Titles  ', type: 'text' }
+        ],
+        columns: [
+            { field: 'recid', caption: 'ID', size: '50px', sortable: true, attr: 'align=center' },
+            { field: 'MatchRecord', caption: 'Match Record',  sortable: true },
+            { field: 'YTDwl', caption: 'YTD W/L ', size: '100px', sortable: true },
+            { field: 'CAREERwl', caption: 'CAREER W/L', size: '140px', sortable: true },
+            { field: 'YTDFEDEXIndex', caption: 'YTD FEDEX Index', size: '100px', sortable: true },
+            { field: 'CareerFedexIndex', caption: 'Career Fedex Index', size: '140px', sortable: true },
+            { field: 'Titles', caption: 'Titles', size: '100px', sortable: true },
+/*            { field: 'sdate', caption: 'Start Date', render: 'date:mm/dd/yyyy', size: '120px' } */
+        ],
+        records: [
+            { recid: 1, MatchRecord: 'Overall', YTDwl: '27 	- 	7', CAREERwl: ' 0.794 ', YTDFEDEXIndex: '160 	- 	83', CareerFedexIndex: ' 0.658 ', Titles: ' 6 '  },
+            { recid: 2, MatchRecord: 'Grand Slams', YTDwl: '4 	- 	1', CAREERwl: ' 0.800 ', YTDFEDEXIndex: '25 	- 	14', CareerFedexIndex: ' 0.641 ', Titles: ' 0 '  },
+            { recid: 3, MatchRecord: 'ATP Masters 1000', YTDwl: '9 	- 	3', CAREERwl: ' 0.818 ', YTDFEDEXIndex: '37 	- 	24', CareerFedexIndex: ' 0.607 ', Titles: ' 1 '  },
+
+            { recid: 4, MatchRecord: 'Tiebreaks', YTDwl: '5 	- 	5', CAREERwl: ' 0.500 ', YTDFEDEXIndex: '70 	- 	54', CareerFedexIndex: ' 0.565 ', Titles: ' 0 '  },
+            { recid: 5, MatchRecord: ' Versus Top 10 ', YTDwl: '2 	- 	4', CAREERwl: ' 0.333 ', YTDFEDEXIndex: '20 	- 	28', CareerFedexIndex: ' 0.417 ', Titles: ' 0 '  },
+            { recid: 6, MatchRecord: ' Finals ', YTDwl: '1 	- 	2', CAREERwl: ' 0.333 ', YTDFEDEXIndex: '6 	- 	9', CareerFedexIndex: ' 0.400 ', Titles: ' 0 '  },
+            { recid: 7, MatchRecord: ' Deciding Set (3rd or 5th Set) ', YTDwl: '6 	- 	3', CAREERwl: ' 0.667 ', YTDFEDEXIndex: '44 	- 	36', CareerFedexIndex: ' 0.550 ', Titles: ' 0 '  },
+            { recid: 8, MatchRecord: ' 5th Set Record ', YTDwl: '2 	- 	0', CAREERwl: ' 1.000 ', YTDFEDEXIndex: '4 	- 	4', CareerFedexIndex: ' 0.500 ', Titles: ' 0 '  },
+
+            { recid: 9, MatchRecord: ' Clay ', YTDwl: '10 	- 	2', CAREERwl: ' 0.833 ', YTDFEDEXIndex: '47 	- 	18', CareerFedexIndex: ' 0.723 ', Titles: ' 2 '  },
+            { recid: 10, MatchRecord: '  Grass  ', YTDwl: '0 	- 	0', CAREERwl: ' 0.000 ', YTDFEDEXIndex: '8 	- 	7', CareerFedexIndex: ' 0.533 ', Titles: ' 0 '  },
+            { recid: 11, MatchRecord: ' Hard ', YTDwl: '17 	- 	5', CAREERwl: ' 0.773 ', YTDFEDEXIndex: '105 	- 	58', CareerFedexIndex: ' 0.644 ', Titles: ' 4 '  },
+            { recid: 12, MatchRecord: '  Carpet ', YTDwl: '0 	- 	0', CAREERwl: ' 0.000 ', YTDFEDEXIndex: '0 	- 	0', CareerFedexIndex: ' 0.000 ', Titles: ' 0 '  },
+            { recid: 13, MatchRecord: '  Indoor ', YTDwl: '4 	- 	3', CAREERwl: ' 0,667 ', YTDFEDEXIndex: '44 	- 	22', CareerFedexIndex: ' 0.667 ', Titles: ' 4 '  },
+            { recid: 14, MatchRecord: '  Outdoor  ', YTDwl: '23 	- 	5', CAREERwl: ' 0.821 ', YTDFEDEXIndex: '116 	- 	61', CareerFedexIndex: ' 0.655 ', Titles: ' 2 '  },
+
+            { recid: 15, MatchRecord: '  After Winning 1st Set ', YTDwl: '24 	- 	2', CAREERwl: ' 0.923 ', YTDFEDEXIndex: '130 	- 	14', CareerFedexIndex: ' 0.903 ', Titles: ' 0 '  },
+            { recid: 16, MatchRecord: '   After Losing 1st Set ', YTDwl: '3 	- 	5', CAREERwl: ' 0.375 ', YTDFEDEXIndex: '30 	- 	69', CareerFedexIndex: ' 0.303 ', Titles: ' 0 '  },
+            { recid: 17, MatchRecord: ' vs. Right Handers ', YTDwl: '26 	- 	6', CAREERwl: ' 0.813 ', YTDFEDEXIndex: '148 	- 	71', CareerFedexIndex: ' 0.676 ', Titles: ' 0 '  },
+            { recid: 18, MatchRecord: '  vs. Left Handers ', YTDwl: '1 	- 	1', CAREERwl: ' 0.500 ', YTDFEDEXIndex: '11 	- 	12', CareerFedexIndex: ' 0.478', Titles: ' 0 '  }
+
+        ]
+    });
+});
+</script>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">Επικοινωνία</h3>
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="https://images.squarespace-cdn.com/content/560195f3e4b0fcc5265b7b78/1582929072800-V9V8WAVTHKWBT5I0NLIT/tsitsipas-marseille-2020-final-trophy.jpg?format=1500w&content-type=image%2Fjpeg"
+                     class="w3-image w3-round" style="width:240px">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Αθήνα<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +0030
+                    0000000000<br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
+                    mail@mail.com<br>
+                </div>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Ονοματεπώνυμο" required
+                                   name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Μήνυμα" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> Αποστολή
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Επιστροφή στην
+            αρχή</a>
+        <div class="w3-xlarge w3-section">
+            <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/StefTsitsipas"></a>
+            <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/stefanostsitsipas98/"></a>
+            <a class="fa fa-twitter w3-hover-opacity" href="https://twitter.com/StefTsitsipas"></a>
+        </div>
+    </footer>
+
+    <script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+    </script>
+    <p>Ημερομηνία/Ώρα: <span id="datetime"></span></p>
+    <script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+
+    </script>
+
+   <div id="google_translate_element"></div>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>
